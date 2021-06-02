@@ -1,6 +1,6 @@
-package rakso.daw.data;
+package data;
 import java.util.ArrayList;
-import rakso.daw.entity.Ingeniero;
+import entity.Ingeniero;
 import java.sql.*;
 
 

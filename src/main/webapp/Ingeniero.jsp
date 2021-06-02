@@ -24,8 +24,9 @@
             <li>Conviertete en distibuidor</li>
         </ul>
     </nav>
-    <div>
+    <div class="mainbody">
         <h1>Hola mundix</h1>
+
     </div>
 </body>
 </html>

@@ -51,10 +51,11 @@ header {
      link: index;
  }
 
- #cuerpa {
+ .mainbody {
      background: #F7F7F7;
      color: black;
      font-family: Helvetica;
      display: inline-block;
      width: 90%;
+     height: auto;
  }

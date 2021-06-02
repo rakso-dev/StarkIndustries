@@ -4,5 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>IngenieroServlet</servlet-name>
+    <servlet-class>web.IngenieroServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>IngenieroServlet</servlet-name>
+    <url-pattern>/Ingeniero</url-pattern>
+  </servlet-mapping>
 
 </web-app>

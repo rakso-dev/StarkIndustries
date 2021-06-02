@@ -1,4 +1,4 @@
-package rakso.daw.entity;
+package entity;
 
 public class Ingeniero {
     private String cedula;

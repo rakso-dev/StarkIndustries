@@ -1,4 +1,4 @@
-package rakso.daw.data;
+package data;
 import java.sql.*;
 
 public class Conexion {

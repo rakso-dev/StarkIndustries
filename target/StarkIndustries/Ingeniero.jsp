@@ -9,8 +9,24 @@
 <html>
 <head>
     <title>Ingenieros</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Hola mundix</h1>
+    <header>
+        <a href="index.html"></a>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Comprar</li>
+            <li><a href="Ingeniero.jsp">Empleados</a>
+            <li>Conviertete en proveedor</li>
+            <li>Conviertete en distibuidor</li>
+        </ul>
+    </nav>
+    <div class="mainbody">
+        <h1>Hola mundix</h1>
+
+    </div>
 </body>
 </html>
