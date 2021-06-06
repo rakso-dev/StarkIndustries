@@ -16,4 +16,9 @@ public class TipoUpper {
     public String getTipo() {
         return tipo;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s", tipo);
+    }
 }
