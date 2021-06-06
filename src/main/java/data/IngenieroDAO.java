@@ -27,7 +27,7 @@ public class IngenieroDAO {
         if(ing == null)
             return;
         Connection conn =  Conexion.connect();
-        PreparedStatement statement = conn.prepareStatement("INSERT INTO ingeniero(cedula, nombre, telefono, direccion, estudios) VALUES (?, row(?,?,?),?, row(?,?,?,?,?), ?)");
+        PreparedStatement statement = conn.prepareStatement("INSERT INTO ingeniero(cedula, nombre, telefono, direccion, estudios) VALUES (?, ROW(?,?,?),?, ROW(?,?,?,?,?), ?)");
         statement.setString(1, ing.getCedula());
         statement.setString(2, ing.getNom_pila());
         statement.setString(3, ing.getApellido1());

@@ -38,6 +38,7 @@ public class IngenieroServlet extends HttpServlet  {
         ingeniero.setApellido1(req.getParameter("PrimerApellido"));
         ingeniero.setApellido2(req.getParameter("SegundoApellido"));
 
+
         IngenieroDAO act = new IngenieroDAO();
         try {
             switch (opt) {
