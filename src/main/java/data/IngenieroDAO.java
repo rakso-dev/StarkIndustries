@@ -1,10 +1,15 @@
 package data;
-import java.util.ArrayList;
+
 import entity.Ingeniero;
-import java.sql.*;
+import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 
-public class IngenieroDAO {
+public class IngenieroDAO implements DAO<Ingeniero>{
 
     public ArrayList<Ingeniero> selectQuery() throws SQLException {
         Connection conn = Conexion.connect();
