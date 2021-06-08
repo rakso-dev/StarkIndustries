@@ -70,5 +70,11 @@ public class ClienteDAO implements DAO<Cliente> {
     public void deleteUpdate(Cliente element) throws SQLException {
         if(element == null)
             return;
+        Connection conn = Conexion.connect();
+        Statement st = conn.createStatement();
+        st.executeUpdate("DELETE FROM cliente WHERE rfc = " + element.getRfc());
+
+        Conexion.close(st);
+        Conexion.close(conn);
     }
 }
