@@ -7,14 +7,14 @@ public class PiezaRobotica {
     private double largo;
     private double ancho;
     private double alto;
-    private int r_fabricante;
+    private String r_fabricante;
     private int r_armadura;
 
     public PiezaRobotica () {}
 
     public PiezaRobotica (int id) { this.id = id; } //ideal para delete
 
-    public PiezaRobotica(int id, String linea, String color, double largo, double ancho, double alto, int r_fabricante, int r_armadura) {
+    public PiezaRobotica(int id, String linea, String color, double largo, double ancho, double alto, String r_fabricante, int r_armadura) {
         this.id = id;
         this.linea = linea;
         this.color = color;
@@ -25,7 +25,7 @@ public class PiezaRobotica {
         this.r_armadura = r_armadura;
     } //Este es para updates y selects
 
-    public PiezaRobotica(String linea, String color, double largo, double ancho, double alto, int r_fabricante, int r_armadura) {
+    public PiezaRobotica(String linea, String color, double largo, double ancho, double alto, String r_fabricante, int r_armadura) {
         this.linea = linea;
         this.color = color;
         this.largo = largo;
@@ -79,11 +79,11 @@ public class PiezaRobotica {
         this.alto = alto;
     }
 
-    public int getR_fabricante() {
+    public String getR_fabricante() {
         return r_fabricante;
     }
 
-    public void setR_fabricante(int r_fabricante) {
+    public void setR_fabricante(String r_fabricante) {
         this.r_fabricante = r_fabricante;
     }
 

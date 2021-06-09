@@ -29,7 +29,7 @@ public class DistribuidorDAO implements DAO<Distribuidor> {
         if(element == null)
             return;
         Connection conn = Conexion.connect();
-        PreparedStatement st = conn.prepareStatement("INSERT INTO distribuidor(rfc, nombre, direccion) VALUES ?, ?, row(?,?,?,?,?)");
+        PreparedStatement st = conn.prepareStatement("INSERT INTO distribuidor(rfc, nombre, direccion) VALUES (?, ?, row(?,?,?,?,?))");
         st.setString(1, element.getRfc());
         st.setString(2, element.getNombre());
         st.setString(3, element.getCalle());
@@ -68,7 +68,7 @@ public class DistribuidorDAO implements DAO<Distribuidor> {
             return;
         Connection conn = Conexion.connect();
         Statement st = conn.createStatement();
-        st.executeUpdate("DELETE FROM distibuidor WHERE rfc = " + element.getRfc());
+        st.executeUpdate("DELETE FROM distribuidor WHERE rfc = " + element.getRfc());
 
         Conexion.close(st);
         Conexion.close(conn);
