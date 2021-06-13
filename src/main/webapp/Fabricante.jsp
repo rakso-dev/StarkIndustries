@@ -23,7 +23,7 @@
             <li>Comprar</li>
             <li><a href="/StarkIndustries/Ingeniero">Empleados</a></li>
             <li><a href="/StarkIndustries/Fabricante">Proveedores</a></li>
-            <li>Conviertete en distibuidor</li>
+            <li><a href="/StarkIndustries/Distribuidor">Distibuidores</a></li>
         </ul>
     </nav>
     <div class="mainbody">

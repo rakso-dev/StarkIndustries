@@ -14,6 +14,11 @@
     <servlet-class>web.FabricanteServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>DistribuidorServlet</servlet-name>
+    <servlet-class>web.DistribuidorServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>IngenieroServlet</servlet-name>
     <url-pattern>/Ingeniero</url-pattern>
@@ -22,6 +27,11 @@
   <servlet-mapping>
     <servlet-name>FabricanteServlet</servlet-name>
     <url-pattern>/Fabricante</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>DistribuidorServlet</servlet-name>
+    <url-pattern>/Distribuidor</url-pattern>
   </servlet-mapping>
 
 </web-app>
