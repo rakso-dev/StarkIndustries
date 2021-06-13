@@ -17,7 +17,6 @@ public class IngenieroServlet extends HttpServlet  {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
         IngenieroDAO ingd = new IngenieroDAO();
         try {
             List<Ingeniero> ing = ingd.selectQuery();
@@ -47,8 +46,10 @@ public class IngenieroServlet extends HttpServlet  {
 
         switch (opt) {
             case 1:
-                if(!insert(ingeniero))
-                    System.out.println("idk");
+                if(!insert(ingeniero)){
+                    break;
+                }
+                resp.sendRedirect("InsertarIngeniero.jsp");
                 break;
             case 2:
                 update(ingeniero);

@@ -17,12 +17,15 @@
     <header>
         <a href="index.html"></a>
     </header>
+    <header>
+        <a href="index.html"></a>
+    </header>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li>Comprar</li>
-            <li><a href="/StarkIndustries/Ingeniero">Empleados</a>
-            <li>Conviertete en proveedor</li>
+            <li><a href="/StarkIndustries/Ingeniero">Empleados</a></li>
+            <li><a href="/StarkIndustries/Fabricante">Proveedores</a></li>
             <li>Conviertete en distibuidor</li>
         </ul>
     </nav>
