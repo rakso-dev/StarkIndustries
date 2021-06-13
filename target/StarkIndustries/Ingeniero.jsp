@@ -21,7 +21,7 @@
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li>Comprar</li>
-            <li><a href="Ingeniero.jsp">Empleados</a>
+            <li><a href="/StarkIndustries/Ingeniero">Empleados</a>
             <li>Conviertete en proveedor</li>
             <li>Conviertete en distibuidor</li>
         </ul>
@@ -52,6 +52,7 @@
             </tr>
             <%}%>
         </table>
+        <a href="InsertarIngeniero.jsp">Agregar empleado</a>
     </div>
 </body>
 </html>

@@ -30,13 +30,20 @@ public class IngenieroServlet extends HttpServlet  {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int opt = Integer.parseInt(req.getParameter("action"));
+        int opt = Integer.parseInt(req.getParameter("option"));
         Ingeniero ingeniero = new Ingeniero();
 
-        ingeniero.setCedula(req.getParameter("Cedula"));
-        ingeniero.setNom_pila(req.getParameter("Nombre"));
-        ingeniero.setApellido1(req.getParameter("PrimerApellido"));
-        ingeniero.setApellido2(req.getParameter("SegundoApellido"));
+        ingeniero.setCedula(req.getParameter("cedula"));
+        ingeniero.setNom_pila(req.getParameter("nombre"));
+        ingeniero.setApellido1(req.getParameter("primerApellido"));
+        ingeniero.setApellido2(req.getParameter("segundoApellido"));
+        ingeniero.setTelefono(req.getParameter("telefono"));
+        ingeniero.setCalle(req.getParameter("calle"));
+        ingeniero.setNumero(Integer.parseInt(req.getParameter("numero")));
+        ingeniero.setCodigo_postal(req.getParameter("codigoPostal"));
+        ingeniero.setCiudad(req.getParameter("ciudad"));
+        ingeniero.setPais(req.getParameter("pais"));
+        ingeniero.setEstudios(req.getParameter("estudios"));
 
         switch (opt) {
             case 1:
