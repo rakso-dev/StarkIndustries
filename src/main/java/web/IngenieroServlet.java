@@ -10,7 +10,7 @@ import data.IngenieroDAO;
 import entity.Ingeniero;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "IngenieroServlet", urlPatterns = {"/Ingeniero"})
 public class IngenieroServlet extends HttpServlet  {
@@ -20,9 +20,9 @@ public class IngenieroServlet extends HttpServlet  {
         PrintWriter out = resp.getWriter();
         IngenieroDAO ingd = new IngenieroDAO();
         try {
-            ArrayList<Ingeniero> ing = ingd.selectQuery();
-            for(Ingeniero inge : ing)
-                out.println(inge.toString());
+            List<Ingeniero> ing = ingd.selectQuery();
+            req.setAttribute("ingenieros", ing);
+            req.getRequestDispatcher("Ingeniero.jsp").forward(req, resp);
         } catch (SQLException e) {
             e.printStackTrace();
         }

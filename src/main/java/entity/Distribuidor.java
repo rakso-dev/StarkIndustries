@@ -80,4 +80,8 @@ public class Distribuidor {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+    public String toString() {
+        return String.format("%s, %s, %s %i, %s, %s, %s", this.rfc);
+    }
 }

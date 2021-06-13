@@ -110,4 +110,9 @@ public class Cliente {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s %s %s, %s, %s %i, %s, %s, %s", this.rfc, this.nom_pila, this.apellido1, this.apellido2, this.telefono, this.calle, this.numero, this.codigo_postal, this.ciudad, this.pais);
+    }
 }
