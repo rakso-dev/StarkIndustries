@@ -31,7 +31,7 @@
     </nav>
     <div class="mainbody">
         <% List<Ingeniero> ing = (List<Ingeniero>) request.getAttribute("ingenieros");%>
-        <table border="1">
+        <table>
             <thead>
                 <td>Cedula</td>
                 <td>Nombre</td>

@@ -28,6 +28,60 @@ public class FabricanteServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        int opt = Integer.parseInt(request.getParameter("option"));
 
+        Fabricante fabricante = new Fabricante();
+        fabricante.setRfc(request.getParameter("rfc"));
+        fabricante.setNombre(request.getParameter("nombre"));
+        fabricante.setCalle(request.getParameter("calle"));
+        fabricante.setNumero(Integer.parseInt(request.getParameter("numero")));
+        fabricante.setCodigo_postal(request.getParameter("codigoPostal"));
+        fabricante.setCiudad(request.getParameter("ciudad"));
+        fabricante.setPais(request.getParameter("pais"));
+
+        insert(fabricante);
+
+        switch (opt) {
+            case 1:
+                if(!insert(fabricante)){
+                    break;
+                }
+                response.sendRedirect("/InsertarFabricante.jsp");
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                response.sendError(HttpServletResponse.SC_FORBIDDEN);
+                break;
+        }
+
+
+    }
+
+    private boolean insert(Fabricante f) {
+        if(f.getRfc().isEmpty())
+            return false;
+        if(f.getNombre().isEmpty())
+            return false;
+        if(f.getCalle().isEmpty())
+            return false;
+        if(f.getNumero() < 0)
+            return false;
+        if(f.getCodigo_postal().isEmpty())
+            return false;
+        if(f.getCiudad().isEmpty())
+            return false;
+        if(f.getPais().isEmpty())
+            return false;
+        FabricanteDAO dao = new FabricanteDAO();
+        try {
+            dao.insertUpdate(f);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }

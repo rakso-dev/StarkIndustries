@@ -9,9 +9,19 @@
     <servlet-class>web.IngenieroServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>FabricanteServlet</servlet-name>
+    <servlet-class>web.FabricanteServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>IngenieroServlet</servlet-name>
     <url-pattern>/Ingeniero</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>FabricanteServlet</servlet-name>
+    <url-pattern>/Fabricante</url-pattern>
   </servlet-mapping>
 
 </web-app>

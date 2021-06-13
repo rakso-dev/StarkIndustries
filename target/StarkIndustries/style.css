@@ -61,5 +61,7 @@ header {
  }
 
  .mainbody table {
+     border: black 1px;
      color: black;
+     alignment: initial;
  }

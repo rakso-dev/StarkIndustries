@@ -21,7 +21,7 @@
 
   <servlet-mapping>
     <servlet-name>FabricanteServlet</servlet-name>
-    <url-pattern>Fabricante</url-pattern>
+    <url-pattern>/Fabricante</url-pattern>
   </servlet-mapping>
 
 </web-app>

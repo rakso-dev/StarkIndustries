@@ -28,7 +28,7 @@ public class FabricanteDAO implements DAO<Fabricante> {
         if(element == null)
             return;
         Connection conn = Conexion.connect();
-        PreparedStatement st = conn.prepareStatement("INSERT INTO fabricante(rfc, nombre, direccion) VALUES ?, ?, row(?,?,?,?,?)");
+        PreparedStatement st = conn.prepareStatement("INSERT INTO fabricante(rfc, nombre, direccion) VALUES (?, ?, row(?,?,?,?,?))");
         st.setString(1, element.getRfc());
         st.setString(2, element.getNombre());
         st.setString(3, element.getCalle());
