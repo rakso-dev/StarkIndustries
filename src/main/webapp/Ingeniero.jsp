@@ -17,9 +17,6 @@
     <header>
         <a href="index.html"></a>
     </header>
-    <header>
-        <a href="index.html"></a>
-    </header>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Inicio</a></li>

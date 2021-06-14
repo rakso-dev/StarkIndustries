@@ -23,6 +23,11 @@
     <servlet-name>ArmaduraServlet</servlet-name>
     <servlet-class>web.ArmaduraServlet</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>PiezaChicaServlet</servlet-name>
+    <servlet-class>web.PiezaChicaServlet</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>IngenieroServlet</servlet-name>
@@ -42,6 +47,11 @@
   <servlet-mapping>
     <servlet-name>ArmaduraServlet</servlet-name>
     <url-pattern>/Armadura</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>PiezaChicaServlet</servlet-name>
+    <url-pattern>/PiezaChica</url-pattern>
   </servlet-mapping>
 
 </web-app>

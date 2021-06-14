@@ -61,7 +61,22 @@ header {
  }
 
  .mainbody table {
-     border: black 1px;
+     font-family: Helvetica;
+     border: solid black 1px;
+     border-collapse: collapse;
      color: black;
      alignment: initial;
+ }
+
+ .mainbody tr, th {
+     font-family: Helvetica;
+     border: solid black 1px;
+     border-collapse: collapse;
+     color: black;
+     alignment: initial;
+ }
+
+ .mainbody form {
+     alignment: initial;
+     text-align: left;
  }

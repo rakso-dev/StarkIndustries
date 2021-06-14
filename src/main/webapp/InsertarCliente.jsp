@@ -36,7 +36,7 @@
             <input type="text" name="numero" placeholder="Numero"> <br>
             <input type="text" name="cp" placeholder="Codigo postal"> <br>
             <input type="text" name="ciudad" placeholder="Ciudad"> <br>
-            <input type="text" name="pais" placeholder="Pais">
+            <input type="text" name="pais" placeholder="Pais"> <br>
             <input type="submit" value="Submit">
         </form>
     </div>
