@@ -18,7 +18,7 @@
 <nav class="navbar">
     <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li>Comprar</li>
+        <li><a href="/StarkIndustries/Armadura">Comprar</a></li>
         <li><a href="/StarkIndustries/Ingeniero">Empleados</a></li>
         <li><a href="/StarkIndustries/Fabricante">Proveedores</a></li>
         <li><a href="/StarkIndustries/Distribuidor">Distibuidores</a></li>
