@@ -17,7 +17,7 @@ public class ArmaduraDAO implements DAO<Armadura> {
         ArrayList<Armadura> armaduras = new ArrayList<>();
 
         while(rs.next()) {
-            armaduras.add(new Armadura(rs.getInt("id"), rs.getString("modelo")));
+            armaduras.add(new Armadura(rs.getInt("num_serie"), rs.getString("modelo")));
         }
         Conexion.close(rs);
         Conexion.close(st);
@@ -29,8 +29,9 @@ public class ArmaduraDAO implements DAO<Armadura> {
         if(armadura == null)
             return;
         Connection conn = Conexion.connect();
-        PreparedStatement st = conn.prepareStatement("INSERT INTO armadura(modelo) VALUES (?)");
-        st.setString(1, armadura.getModelo());
+        PreparedStatement st = conn.prepareStatement("INSERT INTO armadura(num_serie, modelo) VALUES (?,?)");
+        st.setInt(1, armadura.getNum_serie());
+        st.setString(2, armadura.getModelo());
         st.executeUpdate();
         Conexion.close(st);
         Conexion.close(conn);
@@ -52,7 +53,7 @@ public class ArmaduraDAO implements DAO<Armadura> {
         if(armadura == null)
             return;
         Connection conn = Conexion.connect();
-        PreparedStatement st = conn.prepareStatement("DELETE FROM armadura WHERE id = ?");
+        PreparedStatement st = conn.prepareStatement("DELETE FROM armadura WHERE num_serie = ?");
         st.setInt(1, armadura.getNum_serie());
         st.executeUpdate();
         Conexion.close(st);

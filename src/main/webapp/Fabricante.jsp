@@ -41,7 +41,7 @@
             <tr>
                <td><%out.println(f.getRfc());%></td>
                <td><%out.println(f.getNombre());%></td>
-               <td><%out.println(f.getCalle() + " " + f.getNombre());%></td>
+               <td><%out.println(f.getCalle() + " " + f.getNumero());%></td>
                <td><%out.println(f.getCodigo_postal());%></td>
                <td><%out.println(f.getCiudad());%></td>
                <td><%out.println(f.getPais());%></td>
