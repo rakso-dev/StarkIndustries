@@ -1,22 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
   User: oskarbeltranmagana
-  Date: 27/05/21
-  Time: 22:29
+  Date: 13/06/21
+  Time: 19:57
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.Ingeniero"%>
+<%@ page import="entity.Cliente" %>
 <html>
 <head>
-    <title>Ingenieros</title>
+    <title>Clientes</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-        <a href="index.html"></a>
-    </header>
     <header>
         <a href="index.html"></a>
     </header>
@@ -30,32 +27,30 @@
         </ul>
     </nav>
     <div class="mainbody">
-        <% List<Ingeniero> ing = (List<Ingeniero>) request.getAttribute("ingenieros");%>
         <table>
             <thead>
-                <td>Cedula</td>
+                <td>RFC</td>
                 <td>Nombre</td>
-                <td>telefono</td>
-                <td>Direccion</td>
+                <td>Telefono</td>
+                <td>Calle</td>
                 <td>Codigo Postal</td>
                 <td>Ciudad</td>
                 <td>Pais</td>
-                <td>Estudios</td>
             </thead>
-            <% for(Ingeniero i : ing) {%>
+            <% List<Cliente> clientes = (List<Cliente>) request.getAttribute("clientes"); %>
+            <% for(Cliente c : clientes) {%>
             <tr>
-                <td><% out.println(i.getCedula()); %></td>
-                <td><% out.println(i.getNom_pila() + " " + i.getApellido1() + " " + i.getApellido2()); %></td>
-                <td><% out.println(i.getTelefono()); %></td>
-                <td><% out.println(i.getCalle() + " " + i.getNumero()); %></td>
-                <td><% out.println(i.getCodigo_postal()); %></td>
-                <td><% out.println(i.getCiudad()); %> </td>
-                <td><% out.println(i.getPais()); %></td>
-                <td><% out.println(i.getEstudios()); %></td>
+                <td><% out.println(c.getRfc()); %></td>
+                <td><% out.println(c.getNom_pila() + " " + c.getApellido1() + " " + c.getApellido2()); %></td>
+                <td><% out.println(c.getTelefono()); %></td>
+                <td><% out.println(c.getCalle() + " " + c.getNumero()); %></td>
+                <td><% out.println(c.getCodigo_postal()); %></td>
+                <td><% out.println(c.getCiudad()); %></td>
+                <td><% out.println(c.getPais()); %></td>
             </tr>
             <%}%>
         </table>
-        <a href="InsertarIngeniero.jsp">Agregar empleado</a>
+        <a href="InsertarCliente.jsp">Nuevo cliente</a>
     </div>
 </body>
 </html>
