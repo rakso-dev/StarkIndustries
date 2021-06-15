@@ -53,9 +53,10 @@ public class IngenieroServlet extends HttpServlet  {
                 break;
             case 2:
                 update(ingeniero);
+                resp.sendRedirect("/StarkInduestries/Ingeniero");
                 break;
             case 3:
-                if(delete(ingeniero))
+                if(!delete(ingeniero))
                    System.out.println("algo");
                 break;
             default:
@@ -107,7 +108,7 @@ public class IngenieroServlet extends HttpServlet  {
             return false;
         IngenieroDAO dao = new IngenieroDAO();
         try{
-            dao.deleteUpdate(i);
+            dao.safeDelete(i);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

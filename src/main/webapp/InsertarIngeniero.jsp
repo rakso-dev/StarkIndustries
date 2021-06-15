@@ -15,9 +15,6 @@
     <header>
         <a href="index.html"></a>
     </header>
-    <header>
-        <a href="index.html"></a>
-    </header>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -30,17 +27,17 @@
     <div class="mainbody">
         <form method="post" action="/StarkIndustries/Ingeniero">
             <input type="hidden" name="option" value="1">
-            Cedula Profesional <input type="text" name="cedula"> <br>
-            Nombre <input type="text" name="nombre"> <br>
-            Primer apellido <input type="text" name="primerApellido"> <br>
-            Segundo apellido <input type="text" name="segundoApellido"> <br>
-            Telefono <input type="text" name="telefono"> <br>
-            Calle <input type="text" name="calle">
+            Cedula Profesional <input type="text" name="cedula" maxlength="8"> <br>
+            Nombre <input type="text" name="nombre" maxlength="15"> <br>
+            Primer apellido <input type="text" name="primerApellido" maxlength="20"> <br>
+            Segundo apellido <input type="text" name="segundoApellido" maxlength="20"> <br>
+            Telefono <input type="text" name="telefono" maxlength="10"> <br>
+            Calle <input type="text" name="calle" maxlength="20">
             Numero <input type="text" name="numero"> <br>
-            Codigo Postal <input type="text" name="codigoPostal"> <br>
-            Ciudad <input type="text" name="ciudad"> <br>
-            Pais <input type="text" name="pais"> <br>
-            Estudios <input type="text" name="estudios"> <br>
+            Codigo Postal <input type="text" name="codigoPostal" maxlength="5"> <br>
+            Ciudad <input type="text" name="ciudad" maxlength="20"> <br>
+            Pais <input type="text" name="pais" maxlength="20"> <br>
+            Estudios <input type="text" name="estudios" maxlength="15" > <br>
             <input type="submit" value="Submit">
         </form>
     </div>

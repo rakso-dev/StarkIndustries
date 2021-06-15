@@ -121,7 +121,7 @@ public class Ingeniero {
         this.estudios = estudios;
     }
 
-    public String toString () {
-        return String.format("%s, %s %s %s, %s, %s %d, %s, %s, %s, %s", this.cedula, this.nom_pila, this.apellido1, this.apellido2, this.telefono, this.calle, this.numero,this.codigo_postal, this.ciudad, this.pais, this.estudios);
+    public String redirectParameters () {
+        return String.format("cedula=%s&nom_pila=%s&apellido1=%s&apellido2=%s&telefono=%s&calle=%s&numero=%d&codigo_postal=%s&ciudad=%s&pais=%s&estudios=%s", this.cedula, this.nom_pila, this.apellido1, this.apellido2, this.telefono, this.calle, this.numero,this.codigo_postal, this.ciudad, this.pais, this.estudios);
     }
 }

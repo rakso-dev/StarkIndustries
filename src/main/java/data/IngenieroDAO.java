@@ -32,7 +32,7 @@ public class IngenieroDAO implements DAO<Ingeniero>{
         if(ing == null)
             return;
         Connection conn =  Conexion.connect();
-        PreparedStatement statement = conn.prepareStatement("INSERT INTO ingeniero(cedula, nombre, telefono, direccion, estudios) VALUES (?, ROW(?,?,?),?, ROW(?,?,?,?,?), ?)");
+        PreparedStatement statement = conn.prepareStatement("INSERT INTO ingeniero(cedula, nombre, telefono, direccion, estudios, estado) VALUES (?, ROW(?,?,?),?, ROW(?,?,?,?,?), ?, true)");
         statement.setString(1, ing.getCedula());
         statement.setString(2, ing.getNom_pila());
         statement.setString(3, ing.getApellido1());
@@ -78,6 +78,18 @@ public class IngenieroDAO implements DAO<Ingeniero>{
         statement.setString(11, ing.getCedula());
         statement.executeUpdate();
         Conexion.close(statement);
+        Conexion.close(conn);
+    }
+
+    public void safeDelete(Ingeniero ing) throws SQLException{
+        if(ing == null)
+            return;
+        Connection conn = Conexion.connect();
+        PreparedStatement st = conn.prepareStatement("UPDATE ingeniero SET estado = false WHERE cedula = ?");
+        st.setString(1, ing.getCedula());
+        st.executeUpdate();
+
+        Conexion.close(st);
         Conexion.close(conn);
     }
 
