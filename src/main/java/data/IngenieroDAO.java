@@ -28,6 +28,21 @@ public class IngenieroDAO implements DAO<Ingeniero>{
         return ing;
     }
 
+    public Ingeniero searchQuery(String cedula) throws SQLException {
+        Connection conn = Conexion.connect();
+        PreparedStatement st = conn.prepareStatement("SELECT cedula, (nombre).nom_pila, (nombre).apellido1, (nombre).apellido2, telefono, (direccion).calle, (direccion).numero, (direccion).codigo_postal, (direccion).ciudad, (direccion).pais, estudios FROM ingeniero WHERE cedula = ?");
+        st.setString(1, cedula);
+        ResultSet rs = st.executeQuery();
+        Ingeniero ingeniero = new Ingeniero(rs.getString("cedula"), rs.getString("nom_pila"), rs.getString("apellido1"), rs.getString("apellido2"),
+                rs.getString("telefono"), rs.getString("calle"), rs.getInt("numero"),
+                rs.getString("codigo_postal"), rs.getString("ciudad"),
+                rs.getString("pais"), rs.getString("estudios"));
+        Conexion.close(rs);
+        Conexion.close(st);
+        Conexion.close(conn);
+        return ingeniero;
+    }
+
     public void insertUpdate(Ingeniero ing) throws SQLException{
         if(ing == null)
             return;
