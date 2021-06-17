@@ -30,4 +30,8 @@ public class Armadura {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+    public String toString() {
+        return String.format("%s, %i", this.modelo, this.num_serie);
+    }
 }

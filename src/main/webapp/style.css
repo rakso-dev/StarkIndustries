@@ -59,3 +59,24 @@ header {
      width: 90%;
      height: auto;
  }
+
+ .mainbody table {
+     font-family: Helvetica;
+     border: solid black 1px;
+     border-collapse: collapse;
+     color: black;
+     alignment: initial;
+ }
+
+ .mainbody tr, th {
+     font-family: Helvetica;
+     border: solid black 1px;
+     border-collapse: collapse;
+     color: black;
+     alignment: initial;
+ }
+
+ .mainbody form {
+     alignment: initial;
+     text-align: left;
+ }

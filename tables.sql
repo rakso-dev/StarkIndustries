@@ -131,3 +131,18 @@ create table Ventas(
 );
 
 insert into tipo_upper (tipo) values ('Brazos'), ('Pecho'), ('Casco');
+
+alter table Ingeniero 
+add estado boolean;
+
+alter table Cliente
+add estado boolean;
+
+alter table Fabricante
+add estado boolean;
+
+alter table Distribuidor
+add estado boolean;
+
+alter table Armadura
+on delete set null;
