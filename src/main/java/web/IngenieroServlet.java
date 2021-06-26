@@ -53,7 +53,7 @@ public class IngenieroServlet extends HttpServlet  {
                 break;
             case 2:
                 update(ingeniero);
-                resp.sendRedirect("/StarkInduestries/Ingeniero");
+                resp.sendRedirect("/StarkIndustries/Ingeniero");
                 break;
             case 3:
                 if(!delete(ingeniero))

@@ -17,9 +17,6 @@
     <header>
         <a href="index.html"></a>
     </header>
-    <header>
-        <a href="index.html"></a>
-    </header>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -41,6 +38,7 @@
                 <td>Ciudad</td>
                 <td>Pais</td>
                 <td>Estudios</td>
+                <td></td>
             </thead>
             <% for(Ingeniero i : ing) {%>
             <tr>
@@ -52,6 +50,7 @@
                 <td><% out.println(i.getCiudad()); %> </td>
                 <td><% out.println(i.getPais()); %></td>
                 <td><% out.println(i.getEstudios()); %></td>
+                <td><% out.println("<a href=ModificarIngeniero.jsp?" + i.redirectParameters() + ">Modificar</a>");%></td>
             </tr>
             <%}%>
         </table>
